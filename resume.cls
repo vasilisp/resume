@@ -65,22 +65,27 @@
 
 \newcommand{\addressSep}{$\diamond$} % Set default address separator to a diamond symbol
 
-% One, two or three address lines can be specified
+% up to four address lines can be specified
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
+\let \@addressfour \relax
 
 % The \address command is used to set the first, second and third address lines (the last 2 are optional)
 \newcommand{\address}[1]{
-	\@ifundefined{@addressone}{ % If the first address line has not been set yet, set it
-		\def \@addressone {#1}
-	}{
-		\@ifundefined{@addresstwo}{ % If the second address line has not been set yet, set it
-			\def \@addresstwo {#1}
-		}{ % Otherwise, set the third address line
-			\def \@addressthree {#1}
-		}%
-	}
+  \@ifundefined{@addressone}{ % If the first address line has not been set yet, set it
+    \def \@addressone {#1}
+  }{
+    \@ifundefined{@addresstwo}{ % If the second address line has not been set yet, set it
+      \def \@addresstwo {#1}
+    }{ % Otherwise, set the third address line
+      \@ifundefined{@addressthree}{ % If the second address line has not been set yet, set it
+	\def \@addressthree {#1}
+      }{ % Otherwise, set the third address line
+	\def \@addressfour {#1}
+      }%
+    }%
+  }
 }
 
 % \printaddress is used to style an address line (provided in the single parameter to the command)
@@ -112,6 +117,7 @@
 	\@ifundefined{@addressone}{}{\printaddress{\@addressone}} % Output the first address if specified
 	\@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}} % Output the second address if specified
 	\@ifundefined{@addressthree}{}{\printaddress{\@addressthree}} % Output the third address if specified
+	\@ifundefined{@addressfour}{}{\printaddress{\@addressfour}} % Output fourth third address if specified
 }
 
 %----------------------------------------------------------------------------------------
