@@ -1,22 +1,25 @@
 \documentclass[11pt]{resume}
 
+\usepackage{xurl}
+\usepackage{url}
+
 \usepackage{fontspec}
 \setmainfont{Liberation Sans}
 
 \name{Vasilis Papavasileiou}
 
-\address{Athens, Greece}
-\address{\texttt{vasilis@fastmail.com}}
-\address{\texttt{(+30)6988539039}}
-\address{\texttt{https://github.com/vasilisp}}
+\address{Athens, Greece \,|\,
+  \texttt{vasilis@fastmail.com} \,|\,
+  \texttt{(+30)6988539039} \,|\,
+  \url{https://github.com/vasilisp}}
 
 \begin{document}
 
 \begin{rSection}{Summary}
-Backend engineer with a Ph.D. in Computer Science and a decade of
-experience designing scalable distributed solutions. Strong functional
-programming background, adaptable to a wide range of technologies and
-architectures.
+Backend developer with a Ph.D. in Computer Science and a decade of
+experience building large-scale distributed systems. Strong foundation
+in functional programming, applied pragmatically, with versatility
+across diverse technologies.
 \end{rSection}
 
 \begin{rSection}{Experience}
@@ -25,35 +28,32 @@ architectures.
       Developer}{Remote}
   \item Led development of one of the world’s largest Web crawlers,
     processing billions of pages per day.
-  \item Built and maintained distributed OCaml backends for
-    high-reliability, low-latency data processing.
-  \item Developed petabyte-scale data pipelines and storage solutions
-    using ClickHouse, RocksDB, and MySQL.
-  \item Participated in DevOps for thousands of Linux hosts and
+  \item Built and maintained distributed OCaml backends for reliable,
+    high-throughput data processing.
+  \item Developed petabyte-scale storage solutions using ClickHouse
+    and other DB systems.
+  \item Contributed to DevOps across thousands of Linux hosts and
     multi-petabyte storage clusters.
   \end{rSubsection}
 
   \begin{rSubsection}{BeSport}{Jul 2017 -- Oct 2018}{Full-Stack
       Developer}{Paris, France}
-  \item Developed and deployed social network features in OCaml,
-    delivering production-ready code with strong guarantees on
-    correctness.
+  \item Delivered production-ready social features in OCaml with
+    strong correctness guarantees.
   \item Created article classification algorithms improving content
-    discovery and engagement.
-  \item Continued core contributions to the Ocsigen Web Framework,
-    enhancing reliability and developer productivity.
+    discovery.
+  \item Continued core contributions to the Ocsigen Web Framework.
   \end{rSubsection}
 
   \begin{rSubsection}{Paris Diderot University}{Jun 2015 -- Jun
       2017}{Postdoctoral Researcher}{Paris, France}
   \item Maintained and extended the open-source Ocsigen Web Framework
     for OCaml.
-  \item Developed a full-stack reactive programming framework to
-    simplify client- and server-side page generation and updates.
-  \item Implemented advanced type system features to ensure safe and
-    robust client-server communication.
-  \item Implemented a new high-performance HTTP backend adopted in
-    production systems.
+  \item Developed a reactive framework to streamline client-server Web
+    development.
+  \item Introduced advanced type system features for safe
+    client-server communication.
+  \item Implemented a new high-performance HTTP backend.
   \end{rSubsection}
 
 \end{rSection}
@@ -64,6 +64,8 @@ architectures.
       June 2015}{Ph.D. in Computer Science}{Boston, MA, USA}
   \item Dissertation: Mathematical Programming Modulo Theories
   \item Advisor: Pete Manolios
+  \item 6 peer-reviewed publications available at
+    \url{https://github.com/vasilisp/pub}
   \end{rSubsection}
 
   \begin{rSubsection}{National Technical University of Athens}{September 2003 -
@@ -75,64 +77,13 @@ architectures.
 	
 \end{rSection}
 
-\newpage
-
-\begin{rSection}{Publications}
-
-  \emph{Eliom: tierless Web programming from the ground up} \\
-  Gabriel Radanne, Vasilis Papavasileiou, Jerome Vouillon, and Vincent
-  Balat \\
-  IFL, 2016 
-
-  \emph{The Inez Mathematical Programming Modulo Theories Framework} \\
-  Panagiotis Manolios, Jorge Pais, and Vasilis Papavasileiou \\
-  CAV, 2015
-
-  \emph{ILP Modulo Data} \\
-  Panagiotis Manolios, Vasilis Papavasileiou, and Mirek Riedewald \\
-  FMCAD, 2014
-
-  \emph{ILP Modulo Theories} \\
-  Panagiotis Manolios and Vasilis Papavasileiou \\
-  CAV, 2013
-
-  \emph{Pseudo-Boolean Solving by Incremental Translation to SAT} \\
-  Panagiotis Manolios and Vasilis Papavasileiou \\
-  FMCAD, 2011
-
-  \emph{Synthesizing Cyber-Physical Architectural Models with Real-Time Constraints} \\
-  Christine Hang, Panagiotis Manolios, and Vasilis Papavasileiou \\
-  CAV, 2011
-
-  \emph{Virtual Integration of CyberPhysical Systems by Verification} \\
-  Panagiotis Manolios and Vasilis Papavasileiou \\
-  AVICPS, 2010
-
-\end{rSection}
-
-\begin{rSection}{Academic Service}
-
-  \begin{rSubsection}{Teaching Assistant}{2004 - 2013}{}{}
-  \item Theory of Computation (Northeastern)
-  \item Logic and Computation (Northeastern)
-  \item Introduction to Programming (N.T.U. Athens)
-  \end{rSubsection}
-
-  \textbf{Conference Reviews} \hfill 2009-2015 % Bold company name and date to the right
-
-  NFM (2015), FMCAD (2014, 2013, 2011), SAT (2014, 2012, 2011), CAV
-  (2014, 2013), VSTTE (2013, 2012), DAC 2013, ITP 2011, TACAS 2011,
-  DATE 2010
-
-\end{rSection}
-
 \begin{rSection}{Skills}
 
   \begin{tabular}{ll}
     Programming & OCaml, Go, C, C++, Python, Java, Common Lisp \\
 
-    Databases & ClickHouse, PostgreSQL, MySQL, NoSQL (e.g., RocksDB) \\
-
+    Databases & ClickHouse, PostgreSQL, MySQL, RocksDB \\
+    
     Other & Linux, DevOps, LLM technology, Formal Methods \\
 
     Languages & Greek, English, French (full professional
