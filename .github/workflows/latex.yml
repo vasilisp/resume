@@ -9,7 +9,7 @@ on:
       - '**'
 
 jobs:
-  build_latex:
+  build :
     name: Compile LaTeX
     runs-on: ubuntu-latest
 
@@ -24,8 +24,29 @@ jobs:
           latexmk_use_xelatex: true
           extra_system_packages: "font-liberation"
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+      - name: Prepare deploy dir
+        run: |
+          mkdir -p output
+          cp resume.pdf output
+
+      - name: Upload resume artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: PDF
-          path: resume.pdf
+          path: output/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
